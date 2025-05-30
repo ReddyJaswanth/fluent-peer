@@ -13,9 +13,9 @@ const SignUpPage = () => {
 
   const queryClient = useQueryClient();
 
-  const {mutate:signupMutation, isPending, error} = useMutation({
+  const { mutate: signupMutation, isPending, error } = useMutation({
     mutationFn: signup,
-    onSuccess:() => queryClient.invalidateQueries({queryKey:["authUser"]})
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["authUser"] })
   });
 
   const handleSignup = (e) => {
@@ -33,7 +33,7 @@ const SignUpPage = () => {
           <div className="mb-4 flex items-center justify-start gap-2">
             <ShipWheelIcon className="size-9 text-primary" />
             <span className="text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-              Streamify
+              Fluent Peer
             </span>
           </div>
 
@@ -50,7 +50,7 @@ const SignUpPage = () => {
                 <div>
                   <h2 className="text-xl font-semibold">Create an Account</h2>
                   <p className="text-sm opacity-70">
-                    Join Streamify and start your language learning adventure!
+                    Join Fluent Peer and start your language learning adventure!
                   </p>
                 </div>
                 {/* FULL NAME */}
@@ -140,10 +140,10 @@ const SignUpPage = () => {
                   {
                     isPending ? (
                       <>
-                      <span className="loading loading-spinner loading-xs"></span>
-                      Loading...
+                        <span className="loading loading-spinner loading-xs"></span>
+                        Loading...
                       </>
-                    ):(
+                    ) : (
                       "Create Account"
                     )
                   }

@@ -35,7 +35,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2">
             <ShipWheelIcon className="size-7 sm:size-8 text-primary" />
             <span className="text-xl sm:text-2xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider">
-              Streamify
+              Fluent Peer
             </span>
           </Link>
         </div>
